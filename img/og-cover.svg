@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0e0f12"/>
+  <g stroke="rgba(243,245,242,.06)"><path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200M150 0v630M300 0v630M450 0v630M600 0v630M750 0v630M900 0v630M1050 0v630"/></g>
+  <g transform="translate(950,315)" opacity="0.5" stroke="#c6ff2e">
+    <circle r="220" stroke-width="2"/><circle r="150" stroke-width="1.5" opacity="0.6"/><circle r="70" stroke-width="1.5" opacity="0.8"/>
+    <path d="M0 -260V-120M0 120V260M-260 0H-120M120 0H260" stroke-width="2"/>
+    <path d="M-40 30L0 -10L40 30" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="90" y="250" font-family="Oswald, sans-serif" font-weight="700" font-size="118" fill="#5fb6d1" letter-spacing="2">READY</text>
+  <text x="90" y="370" font-family="Oswald, sans-serif" font-weight="700" font-size="118" fill="#ffab3d" letter-spacing="2">STEADY</text>
+  <text x="90" y="490" font-family="Oswald, sans-serif" font-weight="700" font-size="118" fill="#c6ff2e" letter-spacing="2">GROW</text>
+  <text x="94" y="560" font-family="Manrope, sans-serif" font-weight="700" font-size="26" fill="#9aa2a9" letter-spacing="6">UCZĘ LUDZI BYĆ BARDZIEJ GOTOWYMI · ELBA · POZNAŃ</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="Ready Steady Grow">
+  <circle cx="50" cy="50" r="44" stroke="#c6ff2e" stroke-width="3"/>
+  <circle cx="50" cy="50" r="27" stroke="#c6ff2e" stroke-width="1.5" opacity="0.5"/>
+  <!-- crosshair ticks -->
+  <path d="M50 2 V18 M50 82 V98 M2 50 H18 M82 50 H98" stroke="#c6ff2e" stroke-width="3" stroke-linecap="square"/>
+  <!-- growth chevrons rising through center -->
+  <path d="M34 60 L50 44 L66 60" stroke="#c6ff2e" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 70 L50 60 L60 70" stroke="#c6ff2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+</svg>

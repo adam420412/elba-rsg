@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventy &amp; integracje — Ready Steady Grow | Elba, Poznań</title>
+  <meta name="description" content="Eventy i wyjścia integracyjne z RSG: strzelanie, survival i pierwsza pomoc w jednym dniu. Integracje firmowe, urodziny, wieczory kawalerskie i tactical games. Poznań.">
+  <meta name="theme-color" content="#0e0f12">
+  <meta property="og:title" content="Eventy &amp; integracje — Ready Steady Grow">
+  <meta property="og:description" content="Strzelanie + survival + pierwsza pomoc w jednym dniu pełnym energii. Firmy, urodziny, ekipy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-cover.svg">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="agegate" id="agegate">
+    <div class="agegate__box">
+      <div class="agegate__mark">18+</div>
+      <h2>Masz ukończone 18 lat?</h2>
+      <p>Zajęcia strzeleckie i część treści RSG przeznaczone są dla osób pełnoletnich. Wejdź, jeśli masz ukończone 18 lat.</p>
+      <div style="display:flex; gap:22px; justify-content:center; flex-wrap:wrap">
+        <button class="btn-solid" id="age-yes"><span>Tak, wchodzę</span></button>
+        <button class="btn-ghost" id="age-no">Nie</button>
+      </div>
+      <p class="agegate__small">Strzelectwo to sport i szkolenie — zawsze pod okiem prowadzącego, zgodnie z zasadami bezpieczeństwa.</p>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <a class="head-brand" href="index.html" aria-label="Ready Steady Grow — strona główna">
+      <img class="head-brand__mark" src="img/logo-mark.svg" alt="">
+      <span class="head-brand__tx"><span class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></span><span class="b2">Elba · Poznań</span></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Menu"><span class="txt">Menu</span><span class="lines"><i></i><i></i></span></button>
+  </header>
+
+  <nav class="menu" aria-label="Nawigacja">
+    <img class="menu__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+    <ul class="menu__list">
+      <li><a href="index.html"><span class="idx">01</span> Start</a></li>
+      <li><a href="oferta.html"><span class="idx">02</span> Strzelectwo</a></li>
+      <li><a href="szkolenia.html"><span class="idx">03</span> Szkolenia</a></li>
+      <li><a href="eventy.html" class="active"><span class="idx">04</span> Eventy</a></li>
+      <li><a href="sklep.html"><span class="idx">05</span> Sklep</a></li>
+      <li><a href="galeria.html"><span class="idx">06</span> Galeria</a></li>
+      <li><a href="kontakt.html"><span class="idx">07</span> Kontakt</a></li>
+    </ul>
+    <div class="menu__foot"><span>Ready · Steady · Grow</span><span>Poznań PL</span></div>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="index.html">Start</a> <span class="sep">/</span> Eventy</div>
+        <span class="label">Filar 03 — eventy &amp; integracje</span>
+        <h1 class="display"><span class="rline"><span class="rline-in">Dzień, który</span></span> <span class="rline"><span class="rline-in"><em>zapamiętacie</em></span></span></h1>
+        <p class="page-head__lead">Strzelanie, survival i pierwsza pomoc w jednym dniu pełnym energii. Idealne na integrację firmową, urodziny albo wieczór kawalerski — coś więcej niż kolejny wyjazd na kręgle.</p>
+        <span class="page-head__no" aria-hidden="true">03</span>
+      </div>
+    </section>
+
+    <!-- TYPY EVENTÓW -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Rodzaje <em>eventów</em></span></span></h2>
+          <span class="sec-idx">( każdy na wymiar )</span>
+        </div>
+        <div class="cards cards--2">
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13" cy="14" r="5"/><circle cx="27" cy="14" r="5"/><path d="M4 34c0-6 4-10 9-10s9 4 9 10M22 34c0-6 3-10 8-10s6 4 6 10" stroke-linecap="round"/></svg>
+            <span class="tag">Dla firm</span>
+            <h3>Integracja firmowa</h3>
+            <p>Zgrany zespół to zespół, który razem przeżył coś fajnego. Strzelanie + survival + element pierwszej pomocy — z sensem i z adrenaliną.</p>
+          </article>
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/><path d="M10 34h20" stroke-linecap="round"/></svg>
+            <span class="tag">Prywatnie</span>
+            <h3>Urodziny &amp; wieczory kawalerskie</h3>
+            <p>Chcesz zaskoczyć ekipę? Zorganizuję event, po którym znajomi długo będą gadać. Bezpiecznie, energetycznie, z klasą.</p>
+          </article>
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="6"/><path d="M20 2v8M20 30v8M2 20h8M30 20h8" stroke-linecap="round"/></svg>
+            <span class="tag">Rywalizacja</span>
+            <h3>Tactical Games Day</h3>
+            <p>Dzień w klimacie zawodów: strzelanie, ruch, zadania zespołowe i zdrowa rywalizacja. Dla tych, którzy lubią wyzwania.</p>
+          </article>
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 5v30M5 20h30" stroke-linecap="round"/><rect x="8" y="8" width="24" height="24" rx="3"/></svg>
+            <span class="tag">Na wymiar</span>
+            <h3>Event na zamówienie</h3>
+            <p>Masz swój pomysł, temat albo okazję? Ułożę scenariusz dnia pod Waszą grupę — od kilku do kilkunastu osób.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK WYGLĄDA DZIEŃ -->
+    <section class="section section--panel">
+      <div class="wrap split" style="align-items:center">
+        <div>
+          <span class="label">Przykładowy dzień</span>
+          <h2 class="display" style="margin:16px 0 20px"><span class="rline"><span class="rline-in">Od odprawy</span></span> <span class="rline"><span class="rline-in">po <em>finał</em></span></span></h2>
+          <ul class="feature__list">
+            <li><b>1</b> Powitanie, odprawa i zasady bezpieczeństwa</li>
+            <li><b>2</b> Blok strzelecki — pod okiem prowadzącego</li>
+            <li><b>3</b> Zadania survivalowe i zespołowe w terenie</li>
+            <li><b>4</b> Mini-szkolenie z pierwszej pomocy</li>
+            <li><b>5</b> Finał, rywalizacja i pamiątkowe zdjęcia</li>
+          </ul>
+          <p class="copy" style="margin-top:24px">Program dopasowuję do grupy, miejsca i budżetu. Może być bardziej „sportowo", bardziej „taktycznie" albo bardziej „na luzie" — Wy decydujecie o klimacie.</p>
+          <div style="margin-top:30px"><a class="btn-solid" href="kontakt.html"><span>Zapytaj o event <span class="arr">→</span></span></a></div>
+        </div>
+        <div>
+          <div class="shot shot--tall">
+            <img src="img/rsg-event.webp" alt="Grupa na evencie integracyjnym — trening w terenie">
+            <span class="shot__tag">Event integracyjny</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pas zdjęć -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Tak to <em>wygląda</em></span></span></h2>
+          <span class="sec-idx">( kadry )</span>
+        </div>
+        <div class="photo-strip">
+          <div class="shot shot--sq"><img src="img/rsg-event.webp" alt="Grupa na evencie Ready Steady Grow"><span class="shot__tag">Zespół</span></div>
+          <div class="shot shot--sq"><img src="img/rsg-survival.webp" alt="Survival podczas eventu"><span class="shot__tag">Survival</span></div>
+          <div class="shot shot--sq"><img src="img/rsg-strzelnica.webp" alt="Strzelanie podczas eventu"><span class="shot__tag">Strzelanie</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__word" aria-hidden="true">GROW</div>
+      <div class="wrap">
+        <span class="label">Zorganizujmy to razem</span>
+        <h2 class="display"><span class="rline"><span class="rline-in">Zaskocz swoją <em>ekipę</em></span></span></h2>
+        <p class="copy" data-reveal>Napisz, ile Was jest i jaka okazja — przygotuję propozycję dnia i wycenę.</p>
+        <div class="cta__btns" data-reveal="0.15">
+          <a class="btn-solid" href="kontakt.html"><span>Zapytaj o termin <span class="arr">→</span></span></a>
+          <a class="btn-ghost" href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener">Instagram @elba_rsg</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="site-foot__grid">
+        <div class="site-foot__brand">
+          <div class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></div>
+          <p class="about">Uczę ludzi być bardziej gotowymi. Strzelectwo, survival, pierwsza pomoc i eventy — Poznań i okolice.</p>
+          <div class="site-foot__socials">
+            <a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="TikTok — do uzupełnienia"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.9 4 4 4.3v3c-1.5 0-2.9-.5-4-1.3V15a6 6 0 11-6-6c.3 0 .7 0 1 .1V12a3 3 0 103 3V3h2z"/></svg></a>
+            <a href="#" aria-label="Facebook — do uzupełnienia"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .3-1.5 1.6-1.5H17V2.5h-2.6C11.4 2.5 10 4 10 6.7V9H8v3h2v9h4v-9h2.6l.4-3H14z"/></svg></a>
+          </div>
+        </div>
+        <div><h5>Oferta</h5><ul><li><a href="oferta.html">Strzelectwo &amp; pakiety</a></li><li><a href="szkolenia.html">Survival &amp; pierwsza pomoc</a></li><li><a href="eventy.html">Eventy &amp; integracje</a></li><li><a href="sklep.html">Sklep RSG</a></li></ul></div>
+        <div><h5>Nawigacja</h5><ul><li><a href="galeria.html">Galeria</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li></ul></div>
+        <div><h5>Kontakt</h5><ul><li><a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener">Instagram DM ↗</a></li><li><a href="mailto:kontakt@readysteadygrow.pl">kontakt@readysteadygrow.pl</a></li><li><a href="kontakt.html">Poznań &amp; okolice</a></li></ul></div>
+      </div>
+      <div class="site-foot__legal">
+        <span class="badge18">18+</span>
+        <p class="note">Zajęcia strzeleckie dla osób pełnoletnich, prowadzone zgodnie z zasadami bezpieczeństwa pod okiem prowadzącego. Strona ma charakter informacyjny. E‑mail i telefon — do uzupełnienia.</p>
+        <span>© <span id="year"></span> Ready Steady Grow · Elba</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

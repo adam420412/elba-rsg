@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#c6ff2e" role="img" aria-label="">
+  <circle cx="200" cy="200" r="190" stroke-width="1"/>
+  <circle cx="200" cy="200" r="150" stroke-width="1" opacity="0.7"/>
+  <circle cx="200" cy="200" r="96" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="200" cy="200" r="42" stroke-width="1" opacity="0.6"/>
+  <circle cx="200" cy="200" r="3" fill="#c6ff2e" stroke="none"/>
+  <!-- crosshair -->
+  <path d="M200 6 V150 M200 250 V394 M6 200 H150 M250 200 H394" stroke-width="1.5"/>
+  <!-- mil-dot ticks -->
+  <g stroke-width="2" opacity="0.9">
+    <path d="M200 60 h0 M200 90 h0 M200 120 h0"/>
+    <path d="M118 200 h8 M148 200 h8 M274 200 h8 M244 200 h8"/>
+    <path d="M200 118 v8 M200 148 v8 M200 274 v8 M200 244 v8"/>
+  </g>
+  <!-- corner brackets -->
+  <g stroke-width="2" opacity="0.8">
+    <path d="M40 78 V40 H78 M322 40 H360 V78 M360 322 V360 H322 M78 360 H40 V322"/>
+  </g>
+  <!-- growth chevrons -->
+  <path d="M170 224 L200 194 L230 224" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M182 244 L200 226 L218 244" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+</svg>

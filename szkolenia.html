@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survival &amp; pierwsza pomoc — Ready Steady Grow | Elba, Poznań</title>
+  <meta name="description" content="Survival, pierwsza pomoc przedmedyczna i reagowanie w sytuacjach kryzysowych. Szkolenia indywidualne i kursy pierwszej pomocy dla firm (B2B). RSG, Poznań.">
+  <meta name="theme-color" content="#0e0f12">
+  <meta property="og:title" content="Survival &amp; pierwsza pomoc — Ready Steady Grow">
+  <meta property="og:description" content="Reagowanie, pierwsza pomoc przedmedyczna i survival. Także kursy dla firm.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-cover.svg">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="agegate" id="agegate">
+    <div class="agegate__box">
+      <div class="agegate__mark">18+</div>
+      <h2>Masz ukończone 18 lat?</h2>
+      <p>Zajęcia strzeleckie i część treści RSG przeznaczone są dla osób pełnoletnich. Wejdź, jeśli masz ukończone 18 lat.</p>
+      <div style="display:flex; gap:22px; justify-content:center; flex-wrap:wrap">
+        <button class="btn-solid" id="age-yes"><span>Tak, wchodzę</span></button>
+        <button class="btn-ghost" id="age-no">Nie</button>
+      </div>
+      <p class="agegate__small">Strzelectwo to sport i szkolenie — zawsze pod okiem prowadzącego, zgodnie z zasadami bezpieczeństwa.</p>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <a class="head-brand" href="index.html" aria-label="Ready Steady Grow — strona główna">
+      <img class="head-brand__mark" src="img/logo-mark.svg" alt="">
+      <span class="head-brand__tx"><span class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></span><span class="b2">Elba · Poznań</span></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Menu"><span class="txt">Menu</span><span class="lines"><i></i><i></i></span></button>
+  </header>
+
+  <nav class="menu" aria-label="Nawigacja">
+    <img class="menu__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+    <ul class="menu__list">
+      <li><a href="index.html"><span class="idx">01</span> Start</a></li>
+      <li><a href="oferta.html"><span class="idx">02</span> Strzelectwo</a></li>
+      <li><a href="szkolenia.html" class="active"><span class="idx">03</span> Szkolenia</a></li>
+      <li><a href="eventy.html"><span class="idx">04</span> Eventy</a></li>
+      <li><a href="sklep.html"><span class="idx">05</span> Sklep</a></li>
+      <li><a href="galeria.html"><span class="idx">06</span> Galeria</a></li>
+      <li><a href="kontakt.html"><span class="idx">07</span> Kontakt</a></li>
+    </ul>
+    <div class="menu__foot"><span>Ready · Steady · Grow</span><span>Poznań PL</span></div>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="index.html">Start</a> <span class="sep">/</span> Szkolenia</div>
+        <span class="label">Filar 02 — reagowanie &amp; survival</span>
+        <h1 class="display"><span class="rline"><span class="rline-in">Survival &amp;</span></span> <span class="rline"><span class="rline-in"><em>pierwsza pomoc</em></span></span></h1>
+        <p class="page-head__lead">Gotowość to nie tylko celne oko. To umieć zareagować, kiedy dzieje się coś złego — w terenie, w domu i w pracy. Uczę spokojnie i praktycznie, tak, żeby zostało w głowie i w rękach.</p>
+        <span class="page-head__no" aria-hidden="true">02</span>
+      </div>
+    </section>
+
+    <!-- CZEGO SIĘ NAUCZYSZ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Czego się <em>nauczysz</em></span></span></h2>
+          <span class="sec-idx">( konkret, nie teoria )</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6c-5 5-12 5-12 5s0 13 12 24c12-11 12-24 12-24s-7 0-12-5z"/><path d="M20 15v10M15 20h10" stroke-linecap="round"/></svg>
+            <span class="tag">Pierwsza pomoc</span>
+            <h3>Reagowanie i pierwsza pomoc</h3>
+            <p>Ocena sytuacji, wezwanie pomocy, RKO, tamowanie krwotoków, pozycja bezpieczna. Podstawy, które ratują życie.</p>
+          </article>
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 4l4 8 8 1-6 6 2 9-8-4-8 4 2-9-6-6 8-1z"/></svg>
+            <span class="tag">Survival</span>
+            <h3>Survival i teren</h3>
+            <p>Podstawy przetrwania: orientacja, ogień, schronienie, gospodarka wodą i energią, głowa w trudnych warunkach.</p>
+          </article>
+          <article class="card">
+            <svg class="card__ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="14" r="7"/><path d="M8 34c0-7 5-11 12-11s12 4 12 11" stroke-linecap="round"/></svg>
+            <span class="tag">Mindset</span>
+            <h3>Spokój pod presją</h3>
+            <p>Jak nie panikować, kiedy robi się nerwowo. Proste procedury i oddech, które utrzymują Cię „w grze".</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- B2B: KURSY DLA FIRM -->
+    <section class="section section--panel">
+      <div class="wrap split" style="align-items:center">
+        <div>
+          <span class="label">Dla firm — B2B</span>
+          <h2 class="display" style="margin:16px 0 20px"><span class="rline"><span class="rline-in">Kursy pierwszej</span></span> <span class="rline"><span class="rline-in">pomocy <em>dla zespołów</em></span></span></h2>
+          <p class="copy">Przeszkolę Twój zespół z pierwszej pomocy w sposób, który ludzie zapamiętają — praktycznie, z uśmiechem i bez usypiającej teorii. Świetnie łączy się z integracją: uczycie się razem czegoś naprawdę ważnego.</p>
+          <ul class="feature__list">
+            <li><b>01</b> Pierwsza pomoc przedmedyczna dla pracowników</li>
+            <li><b>02</b> Scenariusze dopasowane do Waszego miejsca pracy</li>
+            <li><b>03</b> Ćwiczenia praktyczne, nie tylko slajdy</li>
+            <li><b>04</b> Opcja połączenia ze strzelaniem lub survivalem</li>
+          </ul>
+          <div style="margin-top:30px"><a class="btn-solid" href="kontakt.html"><span>Zapytaj o szkolenie dla firmy <span class="arr">→</span></span></a></div>
+        </div>
+        <div>
+          <div class="shot shot--wide">
+            <img src="img/rsg-pierwsza-pomoc.webp" alt="Ćwiczenie pierwszej pomocy — zakładanie stazy taktycznej">
+            <span class="shot__tag">Pierwsza pomoc</span>
+          </div>
+          <div class="infobox" style="margin-top:16px">
+            <h3 style="font-size:clamp(1.2rem,2.4vw,1.7rem)">Dla kogo?</h3>
+            <p class="copy" style="font-size:.92rem">Zespoły, biura, ekipy produkcyjne, grupy znajomych. Od kilku do kilkunastu osób — zakres i termin dopinamy indywidualnie.</p>
+            <div class="todo-badge">Doprecyzować: certyfikat / zakres godzinowy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK WYGLĄDA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Jak wygląda <em>szkolenie</em></span></span></h2>
+        </div>
+        <ol class="steps">
+          <li><span class="steps__n">01</span><div><h3>Ustalamy potrzeby</h3><p class="copy">Mówisz, kto i po co ma się szkolić. Proponuję zakres, długość i miejsce (u Ciebie lub w terenie).</p></div></li>
+          <li><span class="steps__n">02</span><div><h3>Praktyka od pierwszej minuty</h3><p class="copy">Mało teorii, dużo działania. Ćwiczymy realne scenariusze, aż wejdą w nawyk.</p></div></li>
+          <li><span class="steps__n">03</span><div><h3>Wychodzicie z umiejętnością</h3><p class="copy">Nie z certyfikatem do szuflady, tylko z pewnością, że w razie czego wiecie, co robić.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__word" aria-hidden="true">STEADY</div>
+      <div class="wrap">
+        <span class="label">Bądź gotowy na więcej</span>
+        <h2 class="display"><span class="rline"><span class="rline-in">Naucz się <em>reagować</em></span></span></h2>
+        <p class="copy" data-reveal>Indywidualnie albo z zespołem — napisz, a zaproponuję najlepszy format.</p>
+        <div class="cta__btns" data-reveal="0.15">
+          <a class="btn-solid" href="kontakt.html"><span>Napisz do mnie <span class="arr">→</span></span></a>
+          <a class="btn-ghost" href="eventy.html">Zobacz eventy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="site-foot__grid">
+        <div class="site-foot__brand">
+          <div class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></div>
+          <p class="about">Uczę ludzi być bardziej gotowymi. Strzelectwo, survival, pierwsza pomoc i eventy — Poznań i okolice.</p>
+          <div class="site-foot__socials">
+            <a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="TikTok — do uzupełnienia"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.9 4 4 4.3v3c-1.5 0-2.9-.5-4-1.3V15a6 6 0 11-6-6c.3 0 .7 0 1 .1V12a3 3 0 103 3V3h2z"/></svg></a>
+            <a href="#" aria-label="Facebook — do uzupełnienia"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .3-1.5 1.6-1.5H17V2.5h-2.6C11.4 2.5 10 4 10 6.7V9H8v3h2v9h4v-9h2.6l.4-3H14z"/></svg></a>
+          </div>
+        </div>
+        <div><h5>Oferta</h5><ul><li><a href="oferta.html">Strzelectwo &amp; pakiety</a></li><li><a href="szkolenia.html">Survival &amp; pierwsza pomoc</a></li><li><a href="eventy.html">Eventy &amp; integracje</a></li><li><a href="sklep.html">Sklep RSG</a></li></ul></div>
+        <div><h5>Nawigacja</h5><ul><li><a href="galeria.html">Galeria</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li></ul></div>
+        <div><h5>Kontakt</h5><ul><li><a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener">Instagram DM ↗</a></li><li><a href="mailto:kontakt@readysteadygrow.pl">kontakt@readysteadygrow.pl</a></li><li><a href="kontakt.html">Poznań &amp; okolice</a></li></ul></div>
+      </div>
+      <div class="site-foot__legal">
+        <span class="badge18">18+</span>
+        <p class="note">Zajęcia strzeleckie dla osób pełnoletnich, prowadzone zgodnie z zasadami bezpieczeństwa pod okiem prowadzącego. Strona ma charakter informacyjny. E‑mail i telefon — do uzupełnienia.</p>
+        <span>© <span id="year"></span> Ready Steady Grow · Elba</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

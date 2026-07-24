@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ready Steady Grow — Elba · trening strzelecki, survival i pierwsza pomoc | Poznań</title>
+  <meta name="description" content="Ready Steady Grow (Elba, Poznań) — uczę ludzi być bardziej gotowymi. Strzelectwo, mindset, ruch, reagowanie i survival. Pakiety strzeleckie, kursy pierwszej pomocy i eventy integracyjne.">
+  <meta name="theme-color" content="#0e0f12">
+  <meta property="og:title" content="Ready Steady Grow — Elba">
+  <meta property="og:description" content="Uczę ludzi być bardziej gotowymi. Strzelectwo · survival · pierwsza pomoc · eventy. Poznań.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-cover.svg">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__brand"><span>READY</span><span>STEADY</span><span>GROW</span></div>
+      <div class="loader__bar"><i></i></div>
+      <div class="loader__count">000</div>
+    </div>
+  </div>
+
+  <!-- bramka 18+ -->
+  <div class="agegate" id="agegate">
+    <div class="agegate__box">
+      <div class="agegate__mark">18+</div>
+      <h2>Masz ukończone 18 lat?</h2>
+      <p>Zajęcia strzeleckie i część treści RSG przeznaczone są dla osób pełnoletnich. Wejdź, jeśli masz ukończone 18 lat.</p>
+      <div style="display:flex; gap:22px; justify-content:center; flex-wrap:wrap">
+        <button class="btn-solid" id="age-yes"><span>Tak, wchodzę</span></button>
+        <button class="btn-ghost" id="age-no">Nie</button>
+      </div>
+      <p class="agegate__small">Strzelectwo to sport i szkolenie — zawsze pod okiem prowadzącego, zgodnie z zasadami bezpieczeństwa.</p>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="site-head">
+    <a class="head-brand" href="index.html" aria-label="Ready Steady Grow — strona główna">
+      <img class="head-brand__mark" src="img/logo-mark.svg" alt="">
+      <span class="head-brand__tx">
+        <span class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></span>
+        <span class="b2">Elba · Poznań</span>
+      </span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-label="Menu">
+      <span class="txt">Menu</span>
+      <span class="lines"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <!-- menu -->
+  <nav class="menu" aria-label="Nawigacja">
+    <img class="menu__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+    <ul class="menu__list">
+      <li><a href="index.html" class="active"><span class="idx">01</span> Start</a></li>
+      <li><a href="oferta.html"><span class="idx">02</span> Strzelectwo</a></li>
+      <li><a href="szkolenia.html"><span class="idx">03</span> Szkolenia</a></li>
+      <li><a href="eventy.html"><span class="idx">04</span> Eventy</a></li>
+      <li><a href="sklep.html"><span class="idx">05</span> Sklep</a></li>
+      <li><a href="galeria.html"><span class="idx">06</span> Galeria</a></li>
+      <li><a href="kontakt.html"><span class="idx">07</span> Kontakt</a></li>
+    </ul>
+    <div class="menu__foot">
+      <span>Ready · Steady · Grow</span>
+      <span>Poznań PL</span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO KINOWY -->
+    <section class="hero-cine">
+      <div class="hero-cine__bg"><img src="img/rsg-strzelnica.webp" alt="Trening strzelecki na strzelnicy — Ready Steady Grow"></div>
+      <div class="hero-cine__scrim" aria-hidden="true"></div>
+      <div class="hero-cine__vign" aria-hidden="true"></div>
+      <div class="hero-cine__scan" aria-hidden="true"></div>
+      <div class="scope" aria-hidden="true">
+        <svg viewBox="0 0 220 220" fill="none" stroke="#c6ff2e" stroke-width="1.2">
+          <circle cx="110" cy="110" r="92" opacity=".85"/>
+          <circle cx="110" cy="110" r="58" opacity=".5"/>
+          <circle cx="110" cy="110" r="2.5" fill="#c6ff2e" stroke="none"/>
+          <path d="M110 4v46M110 170v46M4 110h46M170 110h46" stroke-width="1.4"/>
+          <path d="M110 66v14M110 140v14M66 110h14M140 110h14" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="hero-cine__inner">
+        <div class="hero__kicker">
+          <span class="tick"></span>
+          <span class="label">Uczę ludzi być bardziej gotowymi</span>
+        </div>
+        <h1 class="hero-cine__title" aria-label="Ready Steady Grow">
+          <span class="ln"><span>Ready</span></span>
+          <span class="ln"><span>Steady</span></span>
+          <span class="ln"><span>Grow</span></span>
+        </h1>
+        <p class="hero-cine__sub">Strzelectwo, ruch, reagowanie i mindset — w jednym, prostym systemie. <b>Bez pseudo‑wojska i krzyku.</b> Z konkretem, głową i dobrą energią.</p>
+        <div class="hero-cine__cta">
+          <a class="btn-solid" href="oferta.html"><span>Zacznij trenować <span class="arr">→</span></span></a>
+          <a class="btn-line" href="#idea">Poznaj ideę <span class="arr">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-cine__meta">
+        <div class="hero-cine__scroll"><span>Przewiń</span><i></i></div>
+        <span>Strzelectwo · Survival · Pierwsza pomoc · Eventy</span>
+      </div>
+    </section>
+
+    <!-- marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Strzelectwo <em>/</em> Mindset <em>/</em> Ruch <em>/</em> Relacje <em>/</em> Reagowanie <em>/</em> Dobrostan <em>/</em></span>
+        <span>Strzelectwo <em>/</em> Mindset <em>/</em> Ruch <em>/</em> Relacje <em>/</em> Reagowanie <em>/</em> Dobrostan <em>/</em></span>
+      </div>
+    </div>
+
+    <!-- IDEA / o mnie -->
+    <section class="section lead" id="idea">
+      <div class="wrap">
+        <div class="lead__aside">
+          <span class="label">Idea</span>
+          <div class="shot shot--tall" data-reveal="0.1" style="margin-top:6px">
+            <img src="img/rsg-strzelnica.webp" alt="Trening strzelecki na strzelnicy — Ready Steady Grow">
+            <span class="shot__tag">Na strzelnicy</span>
+          </div>
+        </div>
+        <div class="lead__body">
+          <h2 class="display">
+            <span class="rline"><span class="rline-in">Gotowość to</span></span>
+            <span class="rline"><span class="rline-in"><em>umiejętność</em>, nie mit</span></span>
+          </h2>
+          <p class="copy" data-reveal>Nazywam się <strong>Elba</strong> i uczę ludzi być bardziej gotowymi — na strzelnicy, w terenie i w głowie. Nie jestem „po służbach" i nie udaję instruktora z filmu. Jestem od tego, żeby pokazać Ci konkret: jak bezpiecznie strzelać, jak reagować, jak się ruszać i jak myśleć, kiedy robi się nerwowo.</p>
+          <p class="copy" data-reveal="0.12">U mnie może być <strong>miło i na luzie</strong> — a mimo to zrobimy porządny wycisk. Nie musisz być „twardzielem", żeby zacząć. Musisz tylko chcieć być o krok bardziej gotowy niż wczoraj.</p>
+          <div class="lead__sign" data-reveal="0.24"><span class="dot"></span> Ready · Steady · <i>Grow</i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETAPY READY / STEADY / GROW -->
+    <section class="section stages">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Trzy etapy, <em>jedna droga</em></span></span></h2>
+          <span class="sec-idx">System <b>RSG</b></span>
+        </div>
+        <div class="stages__grid">
+          <article class="stage stage--ready">
+            <div class="stage__no">01</div>
+            <div class="stage__tag">Etap pierwszy</div>
+            <h3 class="stage__name"><em>Ready</em> — gotowość</h3>
+            <p class="stage__desc">Fundamenty: bezpieczeństwo, podstawy strzelectwa, pierwsza pomoc i spokojna głowa. Zaczynasz od zera albo prawie od zera — i uczysz się być gotowym.</p>
+          </article>
+          <article class="stage stage--steady">
+            <div class="stage__no">02</div>
+            <div class="stage__tag">Etap drugi</div>
+            <h3 class="stage__name"><em>Steady</em> — regularność</h3>
+            <p class="stage__desc">Wchodzi rutyna. Powtarzalność, celność, opanowanie pod presją, ruch i kondycja. Robisz to regularnie — i coraz pewniej.</p>
+          </article>
+          <article class="stage stage--grow">
+            <div class="stage__no">03</div>
+            <div class="stage__tag">Etap trzeci</div>
+            <h3 class="stage__name"><em>Grow</em> — rozwój</h3>
+            <p class="stage__desc">Mistrzostwo i dobrostan: własne cele, zawody typu Tactical Games, prowadzenie innych. Rośniesz — umiejętność, głowa i ludzie wokół.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAS PARALLAX: survival -->
+    <section class="band">
+      <div class="band__bg"><img src="img/rsg-survival.webp" alt="Survival w terenie o zmierzchu — Ready Steady Grow"></div>
+      <div class="band__scrim" aria-hidden="true"></div>
+      <img class="band__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+      <div class="band__inner">
+        <span class="label band__kicker">Po co to wszystko</span>
+        <h2 class="band__title">
+          <span class="rline"><span class="rline-in">Gotowość to spokój,</span></span>
+          <span class="rline"><span class="rline-in">kiedy inni <em>panikują</em></span></span>
+        </h2>
+        <p class="band__by">Ready · Steady · Grow</p>
+        <div class="band__cta"><a class="btn-solid" href="szkolenia.html"><span>Naucz się reagować <span class="arr">→</span></span></a></div>
+      </div>
+    </section>
+
+    <!-- PILARY / OFERTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Co robimy <em>razem</em></span></span></h2>
+          <span class="sec-idx">( cztery filary )</span>
+        </div>
+        <div class="pillars__grid">
+          <a class="pillar" href="oferta.html">
+            <span class="pillar__num">01</span>
+            <svg class="pillar__ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="7"/><path d="M24 2v10M24 36v10M2 24h10M36 24h10" stroke-linecap="round"/></svg>
+            <h3>Strzelectwo <em>&amp; pakiety</em></h3>
+            <p>Pakiet startowy, trzy gotowe pakiety i treningi indywidualne. Bezpiecznie, od podstaw, w Twoim tempie.</p>
+            <span class="pillar__go">Zobacz pakiety <span class="arr">→</span></span>
+            <span class="pillar__bignum" aria-hidden="true">01</span>
+          </a>
+          <a class="pillar" href="szkolenia.html">
+            <span class="pillar__num">02</span>
+            <svg class="pillar__ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6c-6 6-14 6-14 6s0 16 14 30c14-14 14-30 14-30s-8 0-14-6z"/><path d="M24 18v12M18 24h12" stroke-linecap="round"/></svg>
+            <h3>Survival <em>&amp; pierwsza pomoc</em></h3>
+            <p>Reagowanie, pierwsza pomoc przedmedyczna i survival. Także kursy pierwszej pomocy dla firm.</p>
+            <span class="pillar__go">Zobacz szkolenia <span class="arr">→</span></span>
+            <span class="pillar__bignum" aria-hidden="true">02</span>
+          </a>
+          <a class="pillar" href="eventy.html">
+            <span class="pillar__num">03</span>
+            <svg class="pillar__ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="6"/><circle cx="32" cy="16" r="6"/><path d="M6 40c0-7 5-12 10-12s10 5 10 12M26 40c0-7 4-12 8-12s8 5 8 12" stroke-linecap="round"/></svg>
+            <h3>Eventy <em>&amp; integracje</em></h3>
+            <p>Wyjścia integracyjne, urodziny i firmowe „tactical games". Strzelanie + survival w jednym dniu pełnym energii.</p>
+            <span class="pillar__go">Zorganizuj event <span class="arr">→</span></span>
+            <span class="pillar__bignum" aria-hidden="true">03</span>
+          </a>
+          <a class="pillar" href="sklep.html">
+            <span class="pillar__num">04</span>
+            <svg class="pillar__ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14h32l-3 26H11L8 14z"/><path d="M17 14a7 7 0 0114 0" stroke-linecap="round"/></svg>
+            <h3>Sklep <em>RSG</em></h3>
+            <p>Akcesoria (magazynki, kolimatory, lunety, plecaki) i merch RSG — bluzy z wymiennymi wzorami. Wkrótce.</p>
+            <span class="pillar__go">Zajrzyj do sklepu <span class="arr">→</span></span>
+            <span class="pillar__bignum" aria-hidden="true">04</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILM / REEL -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Zobacz nas <em>w akcji</em></span></span></h2>
+          <span class="sec-idx">( film )</span>
+        </div>
+        <div class="reel">
+          <div class="reel__stage" data-reveal>
+            <img src="img/rsg-event.webp" alt="Ready Steady Grow — trening w terenie">
+            <div class="reel__scrim" aria-hidden="true"></div>
+            <div class="reel__grid" aria-hidden="true"></div>
+            <span class="reel__tag">Film · wkrótce</span>
+            <a class="reel__play" href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener" aria-label="Zobacz film na Instagramie">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </a>
+            <div class="reel__cap"><b>Trailer RSG</b><span>Miejsce na Twój film — teraz prowadzi na reels @elba_rsg</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LICZBY -->
+    <section class="section stats section--panel">
+      <div class="wrap">
+        <div class="stat" data-reveal>
+          <div class="stat__num" data-to="6">6</div>
+          <div class="stat__cap">obszarów gotowości</div>
+        </div>
+        <div class="stat" data-reveal="0.1">
+          <div class="stat__num" data-to="3">3</div>
+          <div class="stat__cap">etapy: ready · steady · grow</div>
+        </div>
+        <div class="stat" data-reveal="0.2">
+          <div class="stat__num" data-to="4">4</div>
+          <div class="stat__cap">filary oferty</div>
+        </div>
+        <div class="stat" data-reveal="0.3">
+          <div class="stat__num" data-to="1">1</div>
+          <div class="stat__cap">indywidualne podejście do Ciebie</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLAIM -->
+    <section class="claim">
+      <img class="claim__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+      <blockquote class="bigclaim">
+        <span class="w">Nie</span> <span class="w">musisz</span> <span class="w">być</span> <span class="w">gotowy</span> <span class="w">na</span> <span class="w">wszystko.</span>
+        <span class="w"><em>Wystarczy,</em></span> <span class="w"><em>że</em></span> <span class="w"><em>zaczniesz</em></span> <span class="w"><em>być</em></span> <span class="w"><em>gotowy.</em></span>
+        <span class="bigclaim__author">— Elba, Ready Steady Grow</span>
+      </blockquote>
+    </section>
+
+    <!-- OPINIE -->
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Co mówią <em>ludzie</em></span></span></h2>
+          <span class="sec-idx">( opinie )</span>
+        </div>
+        <div class="reviews__grid">
+          <article class="review">
+            <div class="review__stars">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+            </div>
+            <p class="review__q">Pierwszy raz trzymałem broń i ani przez chwilę nie czułem się głupio. Spokojnie, bezpiecznie i z uśmiechem — a wyszedłem z realną umiejętnością.</p>
+            <div class="review__by"><span class="review__av">M</span><span><span class="review__name">Marcin K.</span><br><span class="review__role">pakiet startowy</span></span></div>
+          </article>
+          <article class="review">
+            <div class="review__stars">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+            </div>
+            <p class="review__q">Zamówiliśmy event integracyjny dla zespołu. Strzelanie, survival, pierwsza pomoc — ludzie do dziś o tym gadają. Świetnie poprowadzone.</p>
+            <div class="review__by"><span class="review__av">A</span><span><span class="review__name">Anna, HR</span><br><span class="review__role">event firmowy</span></span></div>
+          </article>
+          <article class="review">
+            <div class="review__stars">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+            </div>
+            <p class="review__q">Elba tłumaczy tak, że po prostu rozumiesz. Wracam regularnie — czuję, jak z treningu na trening jestem pewniejszy siebie.</p>
+            <div class="review__by"><span class="review__av">P</span><span><span class="review__name">Paweł R.</span><br><span class="review__role">treningi regularne</span></span></div>
+          </article>
+        </div>
+        <div class="todo-badge">Opinie przykładowe — do podmiany na prawdziwe (np. z DM / Google)</div>
+      </div>
+    </section>
+
+    <!-- PAS PARALLAX: eventy -->
+    <section class="band">
+      <div class="band__bg"><img src="img/rsg-event.webp" alt="Event integracyjny — trening zespołu w terenie"></div>
+      <div class="band__scrim" aria-hidden="true"></div>
+      <img class="band__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
+      <div class="band__inner">
+        <span class="label band__kicker">Nie tylko solo</span>
+        <h2 class="band__title">
+          <span class="rline"><span class="rline-in">Zbierz ekipę</span></span>
+          <span class="rline"><span class="rline-in">i przeżyj <em>coś więcej</em></span></span>
+        </h2>
+        <p class="band__by">Eventy · integracje · tactical games</p>
+        <div class="band__cta"><a class="btn-solid" href="eventy.html"><span>Zorganizuj event <span class="arr">→</span></span></a></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__word" aria-hidden="true">GROW</div>
+      <div class="wrap">
+        <span class="label">Zrób pierwszy krok</span>
+        <h2 class="display">
+          <span class="rline"><span class="rline-in">Gotowy, by</span></span>
+          <span class="rline"><span class="rline-in"><em>zacząć</em>?</span></span>
+        </h2>
+        <p class="copy" data-reveal>Napisz, co Cię interesuje — dobiorę pakiet albo event pod Ciebie. Bez zobowiązań, bez ściemy.</p>
+        <div class="cta__btns" data-reveal="0.15">
+          <a class="btn-solid" href="kontakt.html"><span>Napisz do mnie <span class="arr">→</span></span></a>
+          <a class="btn-ghost" href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener">Instagram @elba_rsg</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STOPKA -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="site-foot__grid">
+        <div class="site-foot__brand">
+          <div class="b1">READY&nbsp;STEADY&nbsp;<i>GROW</i></div>
+          <p class="about">Uczę ludzi być bardziej gotowymi. Strzelectwo, survival, pierwsza pomoc i eventy — Poznań i okolice.</p>
+          <div class="site-foot__socials">
+            <a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok — do uzupełnienia">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.9 4 4 4.3v3c-1.5 0-2.9-.5-4-1.3V15a6 6 0 11-6-6c.3 0 .7 0 1 .1V12a3 3 0 103 3V3h2z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook — do uzupełnienia">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .3-1.5 1.6-1.5H17V2.5h-2.6C11.4 2.5 10 4 10 6.7V9H8v3h2v9h4v-9h2.6l.4-3H14z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5>Oferta</h5>
+          <ul>
+            <li><a href="oferta.html">Strzelectwo &amp; pakiety</a></li>
+            <li><a href="szkolenia.html">Survival &amp; pierwsza pomoc</a></li>
+            <li><a href="eventy.html">Eventy &amp; integracje</a></li>
+            <li><a href="sklep.html">Sklep RSG</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Nawigacja</h5>
+          <ul>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul>
+            <li><a href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener">Instagram DM ↗</a></li>
+            <li><a href="mailto:kontakt@readysteadygrow.pl">kontakt@readysteadygrow.pl</a></li>
+            <li><a href="kontakt.html">Poznań &amp; okolice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-foot__legal">
+        <span class="badge18">18+</span>
+        <p class="note">Zajęcia strzeleckie dla osób pełnoletnich, prowadzone zgodnie z zasadami bezpieczeństwa pod okiem prowadzącego. Strona ma charakter informacyjny. E‑mail i telefon — do uzupełnienia.</p>
+        <span>© <span id="year"></span> Ready Steady Grow · Elba</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
