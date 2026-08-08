@@ -39,9 +39,35 @@ if not exist ".git" (
 )
 
 echo.
-echo   Pobieram stan z GitHuba...
+echo   Sprawdzam, co jest na GitHubie...
 git fetch origin %GALAZ% 2>nul
-if %errorlevel%==0 git reset --soft FETCH_HEAD
+if not %errorlevel%==0 goto :po_sprawdzeniu
+
+rem --- czy ktos inny opublikowal zmiany, ktorych nie mamy u siebie? ---
+set LOKALNY=
+set ZDALNY=
+for /f "delims=" %%i in ('git rev-parse HEAD 2^>nul') do set LOKALNY=%%i
+for /f "delims=" %%i in ('git rev-parse FETCH_HEAD 2^>nul') do set ZDALNY=%%i
+
+if "%LOKALNY%"=="" goto :ustaw_baze
+if "%LOKALNY%"=="%ZDALNY%" goto :ustaw_baze
+
+echo.
+echo   ================================================================
+echo    UWAGA: ktos inny opublikowal zmiany na stronie.
+echo.
+echo    Zeby ich nie skasowac, najpierw kliknij:
+echo        3-POBIERZ-NAJNOWSZE.bat
+echo    a potem powtorz swoje zmiany i opublikuj jeszcze raz.
+echo   ================================================================
+echo.
+pause
+exit /b 1
+
+:ustaw_baze
+git reset --soft FETCH_HEAD
+
+:po_sprawdzeniu
 
 echo   Przygotowuje pliki...
 git add -A || goto :blad

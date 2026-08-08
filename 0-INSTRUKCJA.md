@@ -3,10 +3,44 @@
 Trzy pliki, trzy czynności. Nic więcej nie musisz umieć.
 
 ```
-1-POKAZ-STRONE.bat   →  obejrzyj stronę u siebie na komputerze
-2-OPUBLIKUJ.bat      →  wyślij zmiany do internetu
-Claude               →  powiedz, co ma się zmienić
+Claude                 →  powiedz, co ma się zmienić
+1-POKAZ-STRONE.bat     →  obejrzyj u siebie, zanim ktokolwiek zobaczy
+2-OPUBLIKUJ.bat        →  wyślij do internetu (strona sama się zaktualizuje)
+3-POBIERZ-NAJNOWSZE.bat →  ściągnij aktualną wersję (gdy ktoś inny coś zmienił)
 ```
+
+---
+
+# CZĘŚĆ 0 — Pierwsze uruchomienie (robisz raz)
+
+Potrzebujesz trzech rzeczy. Każda to kilka kliknięć „Dalej".
+
+### 1. Git — program, który wysyła zmiany na stronę
+
+Wejdź na **https://git-scm.com/download/win**, pobierz i zainstaluj.
+Na wszystkich ekranach klikasz **Next / Install**, nic nie zmieniasz. Na końcu **Finish**.
+
+### 2. Konto GitHub
+
+Jeśli nie masz: **https://github.com/signup** — mail, hasło, gotowe.
+**Podaj swój login do osoby, która przekazała Ci stronę** — musi Cię dopisać
+do projektu, inaczej publikacja nie zadziała.
+
+### 3. Claude
+
+Zainstaluj aplikację Claude i zaloguj się.
+
+### 4. Folder ze stroną
+
+Rozpakuj otrzymany folder **`strona-v2`** na Pulpit.
+(Albo, jeśli dostałeś tylko link: uruchom `3-POBIERZ-NAJNOWSZE.bat` w pustym folderze —
+sam pobierze całą stronę.)
+
+### 5. Pierwsza publikacja
+
+Kliknij `2-OPUBLIKUJ.bat`. Za pierwszym razem otworzy się przeglądarka
+z pytaniem, czy zezwolić Gitowi na dostęp do GitHuba → klikasz **Authorize**.
+Robisz to **raz w życiu**.
 
 ---
 
@@ -33,7 +67,7 @@ Piszesz normalnie, tak jak do człowieka. Nie musisz znać nazw plików.
 
 Przykłady, które możesz skopiować:
 
-- `Wrzuciłem nowe zdjęcia do folderu Gotowe zdjęcia — dodaj je do galerii`
+- `Wrzuciłem nowe zdjęcia do folderu nowe-zdjecia — dodaj je do galerii`
 - `W ofercie wpisz cenę pakietu startowego: 450 zł`
 - `Na stronie kontakt ustaw mój telefon 600 123 456`
 - `Zmień opis na stronie głównej na taki: ...` (i wklejasz swój tekst)
@@ -156,15 +190,30 @@ Tu trzeba **usunąć stary rekord i dodać nowy** (bo zmienia się typ z `A` na 
 
 ---
 
+# Gdy stronę zmienia więcej niż jedna osoba
+
+Zasada jest jedna: **zanim zaczniesz zmieniać, kliknij `3-POBIERZ-NAJNOWSZE.bat`.**
+Wtedy masz u siebie to, co jest teraz na stronie.
+
+Gdybyś zapomniał — `2-OPUBLIKUJ.bat` sam to wykryje i napisze:
+
+> *UWAGA: ktoś inny opublikował zmiany na stronie.*
+
+Wtedy klikasz `3-POBIERZ-NAJNOWSZE.bat` i powtarzasz swoją zmianę.
+Nic nie zostanie skasowane — skrypt zatrzyma się, zanim cokolwiek nadpisze.
+
+---
+
 # Ściąga na lodówkę
 
 | Chcę… | Co robię |
 |---|---|
-| dodać zdjęcia | wrzucam je do folderu `Gotowe zdjęcia` → mówię Claude → `2-OPUBLIKUJ.bat` |
+| dodać zdjęcia | wrzucam je do folderu `nowe-zdjecia` → mówię Claude → `2-OPUBLIKUJ.bat` |
 | zmienić tekst albo cenę | mówię Claude → `2-OPUBLIKUJ.bat` |
 | zobaczyć przed publikacją | `1-POKAZ-STRONE.bat` |
 | coś zepsułem | mówię Claude: *„cofnij ostatnią zmianę"* |
 | strona się nie odświeża | czekam 2 minuty, potem **Ctrl + F5** |
+| ktoś inny coś zmienił | `3-POBIERZ-NAJNOWSZE.bat` przed rozpoczęciem pracy |
 
 **Adres roboczy strony:** https://elba-rsg.vercel.app/
 **Adres docelowy (po podpięciu domeny):** https://rsg.com.pl

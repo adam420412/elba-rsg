@@ -20,9 +20,14 @@ from datetime import datetime
 from PIL import Image, ImageOps
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZRODLO = os.path.abspath(os.path.join(BASE, "..", "Gotowe zdjęcia"))
-if not os.path.isdir(ZRODLO):  # zapas: surowe pliki z aparatu
-    ZRODLO = os.path.abspath(os.path.join(BASE, "..", "Zdjecia"))
+# skad brac zdjecia - sprawdzane po kolei, bierzemy wszystkie istniejace
+ZRODLA = [
+    os.path.join(BASE, "nowe-zdjecia"),                 # folder w srodku strony
+    os.path.abspath(os.path.join(BASE, "..", "Gotowe zdjęcia")),
+    os.path.abspath(os.path.join(BASE, "..", "Zdjecia")),
+]
+ZRODLA = [z for z in ZRODLA if os.path.isdir(z)]
+ZRODLO = ZRODLA[0] if ZRODLA else os.path.join(BASE, "nowe-zdjecia")
 FOTO = os.path.join(BASE, "media", "foto")
 THUMB = os.path.join(BASE, "media", "thumb")
 MANIFEST = os.path.join(BASE, "media", "galeria.json")
@@ -83,15 +88,17 @@ def przetworz(sciezka_src, nazwa):
 
 
 def main():
-    if not os.path.isdir(ZRODLO):
-        print("Nie znaleziono folderu ze zdjeciami:", ZRODLO)
+    if not ZRODLA:
+        print("Nie znaleziono zadnego folderu ze zdjeciami.")
+        print("Wrzuc pliki JPG do folderu 'nowe-zdjecia' obok tego pliku.")
         sys.exit(1)
 
     os.makedirs(FOTO, exist_ok=True)
     os.makedirs(THUMB, exist_ok=True)
 
     pliki = []
-    for root, _, names in os.walk(ZRODLO):
+    for zrodlo in ZRODLA:
+      for root, _, names in os.walk(zrodlo):
         for n in sorted(names):
             if n.lower().endswith(ROZSZERZENIA):
                 pliki.append(os.path.join(root, n))

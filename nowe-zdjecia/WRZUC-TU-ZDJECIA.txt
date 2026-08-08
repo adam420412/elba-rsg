@@ -1,0 +1,9 @@
+Wrzuć tutaj nowe zdjęcia (pliki JPG), a potem napisz do Claude:
+
+    "Wrzuciłem nowe zdjęcia do folderu nowe-zdjecia - dodaj je do galerii"
+
+Claude zmniejszy je, doda do galerii i przypisze do odpowiedniej sekcji.
+Potem klikasz 2-OPUBLIKUJ.bat i po 2 minutach są na stronie.
+
+Nie musisz nic zmniejszać ani przerabiać - wrzucasz oryginały prosto z aparatu
+albo z telefonu.
