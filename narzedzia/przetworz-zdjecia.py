@@ -20,13 +20,18 @@ from datetime import datetime
 from PIL import Image, ImageOps
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# skad brac zdjecia - sprawdzane po kolei, bierzemy wszystkie istniejace
-ZRODLA = [
-    os.path.join(BASE, "nowe-zdjecia"),                 # folder w srodku strony
+# Skad brac zdjecia. Bierzemy tylko materialy PRZYGOTOWANE do publikacji:
+#   - nowe-zdjecia      (folder wewnatrz strony - tu wrzuca klient)
+#   - ../Gotowe zdjęcia (wyretuszowane pliki)
+# Surowe pliki z aparatu (../Zdjecia) sa uzywane TYLKO gdy nie ma zadnego z powyzszych.
+ZRODLA = [z for z in [
+    os.path.join(BASE, "nowe-zdjecia"),
     os.path.abspath(os.path.join(BASE, "..", "Gotowe zdjęcia")),
-    os.path.abspath(os.path.join(BASE, "..", "Zdjecia")),
-]
-ZRODLA = [z for z in ZRODLA if os.path.isdir(z)]
+] if os.path.isdir(z)]
+if not ZRODLA:
+    zapas = os.path.abspath(os.path.join(BASE, "..", "Zdjecia"))
+    if os.path.isdir(zapas):
+        ZRODLA = [zapas]
 ZRODLO = ZRODLA[0] if ZRODLA else os.path.join(BASE, "nowe-zdjecia")
 FOTO = os.path.join(BASE, "media", "foto")
 THUMB = os.path.join(BASE, "media", "thumb")
