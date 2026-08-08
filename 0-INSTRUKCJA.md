@@ -86,20 +86,16 @@ gdzie stoi nowa strona.
 DNS domeny obsługuje cyberFolks (`ns1/ns2/ns3.cyberfolks.pl`) — czyli **rekordy
 zmieniasz w panelu cyberFolks**, mimo że domena jest kupiona gdzie indziej.
 
+Wartości poniżej są już gotowe, wzięte z panelu Vercela. Nic nie musisz sprawdzać —
+po prostu je przepisz.
+
 ---
 
-### Krok 1. Dodaj domenę w Vercelu
+### Krok 1. Domena w Vercelu — ZROBIONE ✅
 
-1. Wejdź na: **https://vercel.com/fotz-studios-projects/elba-rsg/settings/domains**
-2. Kliknij **Add Domain** (albo **Add**).
-3. Wpisz: `rsg.com.pl` → **Add**.
-4. Vercel zapyta, jak podpiąć — wybierz opcję z `www` (*Add www.rsg.com.pl and redirect...*).
-   Dzięki temu `rsg.com.pl` i `www.rsg.com.pl` będą działać.
-5. **Zostaw tę stronę otwartą.** Vercel wypisze teraz dwie wartości:
-   - **adres IP** (coś w stylu `216.198.79.1`) — do rekordu **A**
-   - **adres tekstowy** (coś w stylu `cname.vercel-dns.com` albo `abc123.vercel-dns-017.com`) — do rekordu **CNAME**
-
-   Te wartości przepisujesz w kroku 2, **dokładnie tak, jak je widzisz**.
+Domena `rsg.com.pl` i `www.rsg.com.pl` są już dodane w Vercelu.
+Vercel czeka teraz na dwa rekordy w cyberFolks (pisze przy nich *Invalid Configuration* —
+to znika samo, gdy zrobisz krok 2).
 
 ---
 
@@ -110,43 +106,36 @@ zmieniasz w panelu cyberFolks**, mimo że domena jest kupiona gdzie indziej.
    (może się nazywać *Edytor stref DNS* albo *DNS*).
 3. Zobaczysz listę rekordów. Zmieniasz **tylko te dwa**:
 
-**Rekord numer 1 — sama domena**
+#### Rekord 1 — sama domena
 
-| | teraz jest | ma być |
-|---|---|---|
-| Typ | `A` | `A` |
-| Nazwa | `rsg.com.pl` (albo `@`) | bez zmian |
-| Wartość | `185.208.164.193` | **adres IP z Vercela** |
+Znajdź rekord typu **`A`** o nazwie `rsg.com.pl` (albo `@`) i **zmień wartość**:
 
-Klikasz *Edytuj* przy tym rekordzie, podmieniasz adres IP, zapisujesz.
-
-**Rekord numer 2 — wersja z www**
-
-| | teraz jest | ma być |
-|---|---|---|
-| Typ | `A` | `CNAME` |
-| Nazwa | `www` | `www` |
-| Wartość | `185.208.164.193` | **adres tekstowy z Vercela** |
-
-Tutaj trzeba **usunąć** stary rekord `A` dla `www` i **dodać nowy** typu `CNAME`.
-(Panel nie pozwoli mieć obu naraz.)
-
-> Jeśli w polu wartości Vercel pokazuje kropkę na końcu — przepisz ją też.
-
----
-
-### ⛔ Czego NIE WOLNO ruszać
-
-| rekord | dlaczego |
+| | |
 |---|---|
-| `MX` (mail.rsg.com.pl) | na tym stoi Twoja poczta — skasujesz, przestaną przychodzić maile |
-| `TXT` (v=spf1...) | to też poczta — chroni przed trafianiem do spamu |
-| `mail`, `ftp`, `webmail` | obsługa poczty i logowania |
-| serwery DNS (`ns1/ns2/ns3.cyberfolks.pl`) | zostają bez zmian |
+| ❌ było | `185.208.164.193` |
+| ✅ ma być | **`216.198.79.1`** |
 
-**Zmieniasz wyłącznie dwa rekordy z tabelek powyżej.** Poczta działa dalej normalnie.
+Klikasz *Edytuj*, podmieniasz adres, zapisujesz. Typ zostaje `A`, nazwa bez zmian.
 
----
+#### Rekord 2 — wersja z www
+
+Tu trzeba **usunąć stary rekord i dodać nowy** (bo zmienia się typ z `A` na `CNAME`).
+
+1. Znajdź rekord **`A`** o nazwie `www` (wartość `185.208.164.193`) → **Usuń**.
+2. Dodaj nowy rekord:
+
+| pole | co wpisać |
+|---|---|
+| Typ | **`CNAME`** |
+| Nazwa / Host | **`www`** |
+| Wartość / Cel | **`a75a6f32eb3aaf8d.vercel-dns-017.com.`** |
+| TTL | zostaw domyślny (albo 3600) |
+
+> Na końcu wartości CNAME **jest kropka** — przepisz ją. Jeśli panel jej nie przyjmuje,
+> wpisz bez kropki, cyberFolks doda ją sam.
+
+3. Zapisz. Niektóre panele mają jeszcze przycisk **Zapisz strefę** / **Zastosuj** na dole —
+   kliknij go, inaczej zmiany nie wejdą.
 
 ### Krok 3. Poczekaj
 
@@ -160,7 +149,7 @@ Tutaj trzeba **usunąć** stary rekord `A` dla `www` i **dodać nowy** typu `CNA
 
 | Problem | Co zrobić |
 |---|---|
-| Vercel pisze *Invalid Configuration* | Wróć do strefy DNS — pewnie został stary rekord `A` przy `www`. Ma być tylko `CNAME`. |
+| Vercel pisze *Invalid Configuration* | Normalne, dopóki nie zrobisz kroku 2. Jeśli już zrobiłeś — kliknij **Refresh** w Vercelu i sprawdź, czy przy `www` nie został stary rekord `A`. Ma być tylko `CNAME`. |
 | Strona nie otwiera się po godzinie | Sprawdź na dnschecker.org, czy IP się zmieniło. Jeśli nie — rekord nie został zapisany. |
 | Brak kłódki / ostrzeżenie o certyfikacie | Poczekaj jeszcze godzinę. Jeśli dalej nie ma — napisz do mnie. |
 | Przestały chodzić maile | Ktoś ruszył `MX` albo `TXT`. Przywróć je i będzie dobrze. |
