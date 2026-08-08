@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title Ready Steady Grow - serwer lokalny
+title Ready Steady Grow - podglad strony
 cd /d "%~dp0"
 
 set PORT=8080

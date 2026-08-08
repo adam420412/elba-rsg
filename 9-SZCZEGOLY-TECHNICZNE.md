@@ -1,11 +1,14 @@
-# Ready Steady Grow — wersja 2 (z realnymi materiałami)
+# Szczegóły techniczne
+
+> Codzienna obsługa strony jest w pliku **`0-INSTRUKCJA.md`**.
+> Ten plik opisuje, jak to działa od środka.
 
 Strona statyczna, bez frameworków. Wpięte są: **21 kadrów** z folderu `Gotowe zdjęcia`
 oraz **film 45 s** (tło hero + odtwarzacz na stronie głównej i w galerii).
 
 ## Podgląd lokalny
 
-Dwuklik na **START-SERWER.bat** → przeglądarka otworzy `http://localhost:8080/`.
+Dwuklik na **1-POKAZ-STRONE.bat** → przeglądarka otworzy `http://localhost:8080/`.
 Zatrzymanie: zamknij okno konsoli.
 
 Skrypt sam wybiera, czym postawić serwer: Python → Node.js → wbudowany serwer

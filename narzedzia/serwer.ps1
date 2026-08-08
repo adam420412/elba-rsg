@@ -1,5 +1,5 @@
 # Ready Steady Grow - prosty serwer statyczny na PowerShellu.
-# Nie wymaga Pythona ani Node.js. Uruchamiany przez START-SERWER.bat.
+# Nie wymaga Pythona ani Node.js. Uruchamiany przez 1-POKAZ-STRONE.bat.
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot

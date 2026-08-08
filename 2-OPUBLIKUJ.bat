@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title Ready Steady Grow - wysylka na GitHub
+title Ready Steady Grow - publikacja strony
 cd /d "%~dp0"
 
 set REPO=https://github.com/adam420412/elba-rsg.git
@@ -21,7 +21,7 @@ if not %errorlevel%==0 (
   exit /b 1
 )
 
-rem --- opis zmian (mozna podac jako parametr, np. WYSLIJ-NA-GITHUB.bat "nowe zdjecia") ---
+rem --- opis zmian (mozna podac jako parametr, np. 2-OPUBLIKUJ.bat "nowe zdjecia") ---
 set OPIS=%~1
 if not "%OPIS%"=="" goto :mam_opis
 set /p OPIS=  Co sie zmienilo? (Enter = "aktualizacja strony"):
