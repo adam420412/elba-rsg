@@ -53,46 +53,26 @@ Zdjęcie bez wpisu trafia do `teren`. Po edycji uruchom `zbuduj-galerie.py`.
 
 ## Wideo
 
-W `media/wideo/` leżą cztery pliki wygenerowane z Twojego montażu:
+Film pokazowy leci z **YouTube** (*Ready steady grow — film pokazowy*, kanał Fotz Studio) —
+dzięki temu nie waży nic w repozytorium i ładuje się błyskawicznie. Na stronie widać
+plakat z przyciskiem play; YouTube wczytuje się dopiero po kliknięciu, więc nie spowalnia
+wejścia i nie ustawia ciasteczek zanim ktoś świadomie kliknie.
 
-| plik | co to | gdzie działa |
+| plik / element | co to | gdzie |
 |---|---|---|
-| `rsg-film.mp4` | pełny film, 1080p, 45 s, 24 MB | odtwarzacz na `index.html` i `galeria.html` |
-| `rsg-film-plakat.webp` | klatka tytułowa odtwarzacza | — |
-| `rsg-hero.mp4` | pierwsze 9 s (dron), bez dźwięku, 2,7 MB | zapętlone tło hero na stronie głównej |
-| `rsg-hero-plakat.webp` | pierwsza klatka, zanim wideo wystartuje | — |
+| YouTube `2S-0q2ibfko` | pełny film 45 s | `index.html` i `galeria.html` (atrybut `data-yt`) |
+| `media/wideo/rsg-film-plakat.webp` | plakat pod przyciskiem play | — |
+| `media/wideo/rsg-hero.mp4` | 9 s z drona, bez dźwięku, 2,7 MB | zapętlone tło pod nagłówkiem strony głównej |
+| `media/wideo/rsg-hero-plakat.webp` | pierwsza klatka tła | — |
 
-Film startuje dopiero po kliknięciu (`preload="none"`), więc nie obciąża wejścia na stronę.
-Tło hero jest wyciszone i zapętlone — przeglądarki puszczają je automatycznie tylko bez dźwięku.
+**Podmiana filmu:** wgraj nowy na YouTube i zmień `data-yt="..."` na nowe ID
+(to ta część linku po `youtu.be/`). Albo po prostu podeślij link — podmienię.
 
-**Podmiana filmu:** wrzuć nowy plik pod tą samą nazwą albo daj znać — przygotuję wersję
-webową z oryginału (surowy montaż 4K waży 750 MB, do sieci trzeba go przeliczyć).
+**Podmiana tła hero:** potrzebny krótki, wyciszony fragment (8–12 s, do ~3 MB) —
+przygotuję go z Twojego montażu.
 
 ## Co jeszcze zostało do uzupełnienia (treść, nie zdjęcia)
 
 Żółte plakietki na stronach oznaczają miejsca do dopięcia przed publikacją:
 
-- realny e-mail i telefon (`kontakt.html`), linki TikTok / Facebook w stopce,
-- ceny i widełki (`oferta.html`), zakres godzinowy i certyfikat (`szkolenia.html`),
-- prawdziwe opinie zamiast przykładowych (`index.html`),
-- produkty i ceny w sklepie (`sklep.html`),
-- dane administratora i weryfikacja RODO (`polityka-prywatnosci.html`).
-
-Brakuje też zdjęć z **survivalu, pierwszej pomocy i eventów** — w tych miejscach
-stoją teraz najbliższe tematycznie kadry ze strzelnicy.
-
-## Struktura
-
-```
-strona-v2/
-  index.html, oferta.html, szkolenia.html, eventy.html,
-  sklep.html, galeria.html, kontakt.html, polityka-prywatnosci.html
-  css/, js/, fonts/, img/        — szablon strony
-  media/foto/                    — zdjęcia webowe (1920 px, WebP)
-  media/thumb/                   — miniatury (900 px, WebP)
-  media/wideo/                   — film + pętla hero + plakaty
-  media/galeria.json             — manifest (generowany)
-  media/sekcje.json              — przypisanie kadrów do sekcji (edytowalne)
-  narzedzia/                     — skrypty przetwarzania + serwer PowerShell
-  START-SERWER.bat               — podgląd lokalny
-```
+- realny e-mai

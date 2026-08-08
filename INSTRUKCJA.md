@@ -75,8 +75,8 @@ Strona stoi na Vercelu. Domenę zostawiasz w cyberFolks, zmieniasz tylko dwa rek
 
 1. wejdź na [vercel.com](https://vercel.com) → projekt **elba-rsg**,
 2. **Settings** → **Domains** → **Add Domain**,
-3. wpisz swoją domenę, np. `twojadomena.pl`, zatwierdź,
-4. Vercel zaproponuje dodanie też `www.twojadomena.pl` — zgódź się,
+3. wpisz swoją domenę, np. `readysteadygrow.pl`, zatwierdź,
+4. Vercel zaproponuje dodanie też `www.readysteadygrow.pl` — zgódź się,
 5. **Vercel pokaże teraz konkretne wartości do wpisania.** Zostaw tę stronę otwartą —
    przepisujesz je dokładnie, znak w znak.
 
@@ -98,6 +98,10 @@ Strona stoi na Vercelu. Domenę zostawiasz w cyberFolks, zmieniasz tylko dwa rek
 
 4. **NIE ruszaj rekordów `MX` ani `TXT`** — na nich stoi Twoja poczta.
    Zmiana tylko A i CNAME nie psuje maili.
+
+> ℹ️ Sprawdzone dzisiaj: `readysteadygrow.pl` nie ma jeszcze żadnych rekordów DNS
+> (domena nie odpowiada). Najpierw upewnij się w panelu cyberFolks, że domena jest
+> zarejestrowana i obsługiwana przez ich serwery nazw — dopiero potem dodawaj rekordy.
 
 ### Krok 3 — poczekaj
 
