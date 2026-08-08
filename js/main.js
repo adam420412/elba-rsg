@@ -36,8 +36,8 @@
     if (!hasGsap || reduced) return;
     var lines = document.querySelectorAll(".hero__title .ln > span, .hero-cine__title .ln > span");
     var tl = gsap.timeline();
-    if (document.querySelector(".hero-cine__bg img")) {
-      tl.fromTo(".hero-cine__bg img", { scale: 1.3, opacity: .25 }, { scale: 1.12, opacity: 1, duration: 1.9, ease: "power3.out" }, 0);
+    if (document.querySelector(".hero-cine__bg img, .hero-cine__bg video")) {
+      tl.fromTo(".hero-cine__bg img, .hero-cine__bg video", { scale: 1.3, opacity: .25 }, { scale: 1.12, opacity: 1, duration: 1.9, ease: "power3.out" }, 0);
     }
     if (lines.length) {
       tl.fromTo(lines, { yPercent: 120 }, { yPercent: 0, duration: 1.15, stagger: .12, ease: "power4.out" }, .1);
@@ -157,6 +157,26 @@
     });
   }
 
+  /* ---------- YouTube: iframe dopiero po klikniecu ---------- */
+  document.querySelectorAll(".yt-lite").forEach(function (box) {
+    function odpal() {
+      var id = box.getAttribute("data-yt");
+      if (!id || box.dataset.zaladowany) return;
+      box.dataset.zaladowany = "1";
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
+      f.title = "Ready Steady Grow — film pokazowy";
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      f.setAttribute("allowfullscreen", "");
+      box.innerHTML = "";
+      box.appendChild(f);
+    }
+    box.addEventListener("click", odpal);
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); odpal(); }
+    });
+  });
+
   /* ---------- lightbox ---------- */
   var lb = document.getElementById("lightbox");
   if (lb) {
@@ -222,7 +242,7 @@
   /* ---------- hero kinowy: parallax tła + scope za kursorem ---------- */
   var heroCine = document.querySelector(".hero-cine");
   if (heroCine) {
-    var hcBg = heroCine.querySelector(".hero-cine__bg img");
+    var hcBg = heroCine.querySelector(".hero-cine__bg img, .hero-cine__bg video");
     if (hcBg) gsap.to(hcBg, { yPercent: 12, ease: "none", scrollTrigger: { trigger: heroCine, start: "top top", end: "bottom top", scrub: true } });
     gsap.to(heroCine.querySelector(".hero-cine__inner"), { yPercent: -6, opacity: .25, ease: "none", scrollTrigger: { trigger: heroCine, start: "top top", end: "bottom top", scrub: true } });
     var scan = heroCine.querySelector(".hero-cine__scan");

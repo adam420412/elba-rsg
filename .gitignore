@@ -1,0 +1,7 @@
+# pliki robocze
+*.tmp
+_podglad*.html
+_zrzut*.png
+Thumbs.db
+desktop.ini
+.DS_Store

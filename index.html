@@ -9,7 +9,10 @@
   <meta property="og:title" content="Ready Steady Grow — Elba">
   <meta property="og:description" content="Uczę ludzi być bardziej gotowymi. Strzelectwo · survival · pierwsza pomoc · eventy. Poznań.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="img/og-cover.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="media/og-cover.jpg">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -76,7 +79,14 @@
   <main>
     <!-- HERO KINOWY -->
     <section class="hero-cine">
-      <div class="hero-cine__bg"><img src="img/rsg-strzelnica.webp" alt="Trening strzelecki na strzelnicy — Ready Steady Grow"></div>
+      <div class="hero-cine__bg">
+        <video autoplay muted loop playsinline preload="metadata"
+               poster="media/wideo/rsg-hero-plakat.webp"
+               aria-label="Ujęcie z drona nad strzelnicą — Ready Steady Grow">
+          <source src="media/wideo/rsg-hero.mp4" type="video/mp4">
+          <img src="media/foto/DSC06959.webp" alt="Trening strzelecki na osi — Ready Steady Grow, Poznań" width="1920" height="1081">
+        </video>
+      </div>
       <div class="hero-cine__scrim" aria-hidden="true"></div>
       <div class="hero-cine__vign" aria-hidden="true"></div>
       <div class="hero-cine__scan" aria-hidden="true"></div>
@@ -125,8 +135,8 @@
         <div class="lead__aside">
           <span class="label">Idea</span>
           <div class="shot shot--tall" data-reveal="0.1" style="margin-top:6px">
-            <img src="img/rsg-strzelnica.webp" alt="Trening strzelecki na strzelnicy — Ready Steady Grow">
-            <span class="shot__tag">Na strzelnicy</span>
+            <img src="media/foto/DSC06935.webp" alt="Analiza tarczy po serii — rozmowa o tym, co poprawić" width="1920" height="1081" loading="lazy" decoding="async">
+            <span class="shot__tag">Feedback po serii</span>
           </div>
         </div>
         <div class="lead__body">
@@ -173,7 +183,7 @@
 
     <!-- PAS PARALLAX: survival -->
     <section class="band">
-      <div class="band__bg"><img src="img/rsg-survival.webp" alt="Survival w terenie o zmierzchu — Ready Steady Grow"></div>
+      <div class="band__bg"><img src="media/foto/DSC06986.webp" alt="Praca z bronią długą w terenie — Ready Steady Grow" width="1920" height="1081" loading="lazy" decoding="async"></div>
       <div class="band__scrim" aria-hidden="true"></div>
       <img class="band__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
       <div class="band__inner">
@@ -239,16 +249,12 @@
           <span class="sec-idx">( film )</span>
         </div>
         <div class="reel">
-          <div class="reel__stage" data-reveal>
-            <img src="img/rsg-event.webp" alt="Ready Steady Grow — trening w terenie">
-            <div class="reel__scrim" aria-hidden="true"></div>
-            <div class="reel__grid" aria-hidden="true"></div>
-            <span class="reel__tag">Film · wkrótce</span>
-            <a class="reel__play" href="https://www.instagram.com/elba_rsg/" target="_blank" rel="noopener" aria-label="Zobacz film na Instagramie">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </a>
-            <div class="reel__cap"><b>Trailer RSG</b><span>Miejsce na Twój film — teraz prowadzi na reels @elba_rsg</span></div>
+          <div class="reel__stage reel__stage--video yt-lite" data-yt="2S-0q2ibfko" role="button" tabindex="0"
+               aria-label="Odtwórz film: Ready Steady Grow — film pokazowy">
+            <img src="media/wideo/rsg-film-plakat.webp" alt="Ready Steady Grow — kadr z filmu z treningu" width="1920" height="1080" loading="lazy" decoding="async">
+            <span class="yt-lite__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
+          <p class="reel__opis">Dzień na strzelnicy w 45 sekund — od odprawy, przez pracę na osi, po broń długą.</p>
         </div>
       </div>
     </section>
@@ -331,9 +337,31 @@
       </div>
     </section>
 
+
+    <!-- PASEK KADROW Z SESJI -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="display"><span class="rline"><span class="rline-in">Ostatnia <em>sesja</em></span></span></h2>
+          <span class="sec-idx">( kadry ze strzelnicy )</span>
+        </div>
+        <div class="strip-shots" data-reveal>
+          <div class="shot"><img src="media/foto/DSC06897.webp" alt="Odprawa przed strzelaniem" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Odprawa</span></div>
+          <div class="shot"><img src="media/foto/DSC06954.webp" alt="Detal — chwyt pistoletu" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Chwyt</span></div>
+          <div class="shot"><img src="media/foto/DSC06964.webp" alt="Strzelanie na osi" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Na osi</span></div>
+          <div class="shot"><img src="media/foto/DSC06941.webp" alt="Analiza tarczy po serii" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Tarcza</span></div>
+          <div class="shot"><img src="media/foto/DSC06989.webp" alt="Praca z bronią długą" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Karabin</span></div>
+          <div class="shot"><img src="media/foto/DSC06896.webp" alt="Sprzęt przygotowany do zajęć" width="1920" height="1081" loading="lazy" decoding="async"><span class="shot__tag">Sprzęt</span></div>
+        </div>
+        <div style="text-align:center; margin-top:32px">
+          <a class="btn-line" href="galeria.html">Zobacz całą galerię <span class="arr">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- PAS PARALLAX: eventy -->
     <section class="band">
-      <div class="band__bg"><img src="img/rsg-event.webp" alt="Event integracyjny — trening zespołu w terenie"></div>
+      <div class="band__bg"><img src="media/foto/DSC06979.webp" alt="Trening w grupie — omówienie tarczy na osi" width="1920" height="1081" loading="lazy" decoding="async"></div>
       <div class="band__scrim" aria-hidden="true"></div>
       <img class="band__reticle" src="img/reticle.svg" alt="" aria-hidden="true">
       <div class="band__inner">
