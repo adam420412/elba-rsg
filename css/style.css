@@ -160,6 +160,8 @@ h3.display { font-size: clamp(1.4rem, 3vw, 2.3rem); font-weight: 500; }
 .site-head.is-solid { background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line-2); }
 .head-brand { display: flex; align-items: center; gap: 12px; position: relative; z-index: 96; }
 .head-brand__mark { width: 34px; height: 34px; }
+.head-brand__logo { height: 40px; width: auto; display: block; }
+.hero-logo-img { display: block; width: min(100%, 780px); height: auto; filter: drop-shadow(0 12px 40px rgba(0,0,0,.45)); }
 .head-brand__tx { line-height: 1; }
 .head-brand .b1 {
   font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: .12em;
