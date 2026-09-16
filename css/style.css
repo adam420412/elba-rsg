@@ -637,6 +637,21 @@ body.menu-open .menu__list a { transform: translateY(0); }
 /* pasek postępu scrolla */
 .progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--c-ready), var(--c-steady), var(--c-grow)); z-index: 96; will-change: transform; }
 
+/* baner cookies */
+.cookie-bar {
+  position: fixed; left: 16px; right: 16px; bottom: -160px; z-index: 92;
+  max-width: 860px; margin: 0 auto; background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: 16px; padding: 18px 22px; box-shadow: var(--shadow);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px;
+  transition: bottom .6s var(--ease-out);
+}
+.cookie-bar.is-visible { bottom: 18px; }
+.cookie-bar__text { flex: 1 1 320px; margin: 0; font-size: .85rem; line-height: 1.55; color: var(--ink-dim); }
+.cookie-bar__text a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-bar__btn { flex: 0 0 auto; white-space: nowrap; padding: 10px 22px; font-size: .78rem; }
+body.menu-open .cookie-bar { display: none; }
+@media (max-width: 560px) { .cookie-bar { flex-direction: column; align-items: stretch; text-align: left; } .cookie-bar__btn { width: 100%; } }
+
 /* ---------- HERO KINOWY ---------- */
 .hero-cine { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; background: var(--bg); }
 .hero-cine__bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
