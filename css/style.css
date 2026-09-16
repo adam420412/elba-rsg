@@ -157,6 +157,7 @@ h3.display { font-size: clamp(1.4rem, 3vw, 2.3rem); font-weight: 500; }
   transition: transform .5s var(--ease-out), background .4s, backdrop-filter .4s, padding .4s;
 }
 .site-head.is-hidden { transform: translateY(-115%); }
+body.menu-open .site-head { z-index: 96; }
 .site-head.is-solid { background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line-2); }
 .head-brand { display: flex; align-items: center; gap: 12px; position: relative; z-index: 96; }
 .head-brand__mark { width: 34px; height: 34px; }
