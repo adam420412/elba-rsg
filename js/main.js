@@ -130,6 +130,22 @@
   var yEl = document.getElementById("year");
   if (yEl) yEl.textContent = new Date().getFullYear();
 
+  /* ---------- baner cookies ---------- */
+  if (!localStorage.getItem("rsgCookieConsent")) {
+    var cookieBar = document.createElement("div");
+    cookieBar.className = "cookie-bar";
+    cookieBar.innerHTML =
+      '<p class="cookie-bar__text">Ta strona u\u017cywa plik\u00f3w cookies, aby dzia\u0142a\u0107 poprawnie i zapewni\u0107 Ci jak najlepsze wra\u017cenia. Kontynuuj\u0105c przegl\u0105danie, zgadzasz si\u0119 na ich u\u017cycie. Szczeg\u00f3\u0142y znajdziesz w <a href="polityka-prywatnosci.html">Polityce prywatno\u015bci</a>.</p>' +
+      '<button class="btn-solid cookie-bar__btn" type="button"><span>Akceptuj\u0119</span></button>';
+    document.body.appendChild(cookieBar);
+    requestAnimationFrame(function () { cookieBar.classList.add("is-visible"); });
+    cookieBar.querySelector(".cookie-bar__btn").addEventListener("click", function () {
+      localStorage.setItem("rsgCookieConsent", "1");
+      cookieBar.classList.remove("is-visible");
+      setTimeout(function () { cookieBar.remove(); }, 500);
+    });
+  }
+
   /* ---------- pasek postępu scrolla (na każdej stronie) ---------- */
   var pbar = document.createElement("div"); pbar.className = "progress-bar";
   document.body.appendChild(pbar);
