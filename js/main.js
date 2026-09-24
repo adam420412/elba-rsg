@@ -227,8 +227,7 @@
 
   /* ---------- marquee ---------- */
   document.querySelectorAll(".marquee__track").forEach(function (track) {
-    var half = track.scrollWidth / 2;
-    gsap.to(track, { x: -half, duration: 24, ease: "none", repeat: -1 });
+    gsap.to(track, { xPercent: -50, duration: 24, ease: "none", repeat: -1 });
   });
 
   /* ---------- reveal: linie i bloki ---------- */
