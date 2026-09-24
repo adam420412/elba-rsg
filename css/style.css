@@ -334,7 +334,7 @@ body.menu-open .menu__list a { transform: translateY(0); }
 .stages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
 .stage {
   position: relative; border: 1px solid var(--line); padding: clamp(26px, 3vw, 44px);
-  min-height: clamp(320px, 42vh, 440px); display: flex; flex-direction: column; overflow: hidden;
+  min-height: clamp(320px, 42vh, 440px); display: flex; flex-direction: column; justify-content: center; overflow: hidden;
   background: linear-gradient(180deg, transparent, rgba(0,0,0,.16)); isolation: isolate;
 }
 .stage::before { content: ""; position: absolute; left: 0; top: 0; height: 4px; width: 100%; background: var(--st, var(--accent)); }
