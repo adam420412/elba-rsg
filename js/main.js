@@ -134,9 +134,11 @@
   if (!localStorage.getItem("rsgCookieConsent")) {
     var cookieBar = document.createElement("div");
     cookieBar.className = "cookie-bar";
+    cookieBar.setAttribute("role", "region");
+    cookieBar.setAttribute("aria-label", "Informacja o plikach cookies");
     cookieBar.innerHTML =
-      '<p class="cookie-bar__text">Ta strona u\u017cywa plik\u00f3w cookies, aby dzia\u0142a\u0107 poprawnie i zapewni\u0107 Ci jak najlepsze wra\u017cenia. Kontynuuj\u0105c przegl\u0105danie, zgadzasz si\u0119 na ich u\u017cycie. Szczeg\u00f3\u0142y znajdziesz w <a href="polityka-prywatnosci.html">Polityce prywatno\u015bci</a>.</p>' +
-      '<button class="btn-solid cookie-bar__btn" type="button"><span>Akceptuj\u0119</span></button>';
+      '<p class="cookie-bar__text">Ta strona nie u\u017cywa plik\u00f3w cookies \u015bledz\u0105cych ani reklamowych. Zapisujemy w przegl\u0105darce tylko dane techniczne, potrzebne do dzia\u0142ania serwisu (np. potwierdzenie pe\u0142noletno\u015bci i zamkni\u0119cie tego komunikatu). Szczeg\u00f3\u0142y: <a href="polityka-prywatnosci.html">Polityka prywatno\u015bci</a>.</p>' +
+      '<button class="btn-solid cookie-bar__btn" type="button"><span>Rozumiem</span></button>';
     document.body.appendChild(cookieBar);
     requestAnimationFrame(function () { cookieBar.classList.add("is-visible"); });
     cookieBar.querySelector(".cookie-bar__btn").addEventListener("click", function () {
