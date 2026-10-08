@@ -175,15 +175,16 @@
     });
   }
 
-  /* ---------- YouTube: iframe dopiero po klikniecu ---------- */
+  /* ---------- YouTube / Instagram: iframe dopiero po klikniecu ---------- */
   document.querySelectorAll(".yt-lite").forEach(function (box) {
     function odpal() {
       var id = box.getAttribute("data-yt");
-      if (!id || box.dataset.zaladowany) return;
+      var ig = box.getAttribute("data-ig");
+      if ((!id && !ig) || box.dataset.zaladowany) return;
       box.dataset.zaladowany = "1";
       var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
-      f.title = "Ready Steady Grow — film pokazowy";
+      f.src = ig ? "https://www.instagram.com/p/" + ig + "/embed/" : "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
+      f.title = ig ? "Ready Steady Grow \u2014 wideo z Instagrama" : "Ready Steady Grow \u2014 film pokazowy";
       f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       f.setAttribute("allowfullscreen", "");
       box.innerHTML = "";
