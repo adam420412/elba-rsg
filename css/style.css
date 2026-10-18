@@ -778,3 +778,8 @@ body.menu-open .cookie-bar { display: none; }
 /* --- wideo jako tlo hero --- */
 .hero-cine__bg video { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; transform: scale(1.12); will-change: transform; filter: saturate(.92) contrast(1.06) brightness(.86); }
 @media (prefers-reduced-motion: reduce) { .hero-cine__bg video { display: none; } }
+
+/* Eventy: pasek zdjęć w 4 kolumnach, kadry pionowe */
+.photo-strip--4 { grid-template-columns: repeat(4, 1fr); }
+.photo-strip--4 .shot { aspect-ratio: 3 / 4; }
+@media (max-width: 900px) { .photo-strip--4 { grid-template-columns: repeat(2, 1fr); } }
