@@ -776,7 +776,7 @@ body.menu-open .cookie-bar { display: none; }
 .reel__opis { max-width: 60ch; margin: 18px auto 0; text-align: center; color: var(--ink-dim); font-size: .93rem; line-height: 1.6; }
 
 /* --- wideo jako tlo hero --- */
-.hero-cine__bg video { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; transform: scale(1.12); will-change: transform; filter: saturate(.92) contrast(1.06) brightness(.86); }
+.hero-cine__bg video { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; transform: scale(1.12); will-change: transform; backface-visibility: hidden; }
 @media (prefers-reduced-motion: reduce) { .hero-cine__bg video { display: none; } }
 
 /* Eventy: pasek zdjęć w 4 kolumnach, kadry pionowe */

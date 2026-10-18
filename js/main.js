@@ -274,10 +274,28 @@
         var r = heroCine.getBoundingClientRect();
         gsap.to(scope, { x: e.clientX - r.left, y: e.clientY - r.top, duration: .45, ease: "power2.out" });
         var nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
-        if (hcBg) gsap.to(hcBg, { x: nx * -22, y: ny * -14, duration: 1, ease: "power2.out" });
         gsap.to(heroCine.querySelector(".hero-cine__title"), { x: nx * -8, duration: 1, ease: "power2.out" });
       });
     }
+  }
+
+  /* ---------- hero: płynne, ciągłe odtwarzanie wideo w tle ---------- */
+  var heroVid = document.querySelector(".hero-cine__bg video");
+  if (heroVid) {
+    heroVid.muted = true;
+    var kick = function () { var p = heroVid.play(); if (p && p.catch) p.catch(function () {}); };
+    heroVid.addEventListener("loadeddata", kick);
+    heroVid.addEventListener("pause", function () { if (!document.hidden && heroInView) kick(); });
+    heroVid.addEventListener("stalled", kick);
+    var heroInView = true;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) {
+        heroInView = en[0].isIntersecting;
+        if (heroInView) kick(); else heroVid.pause();
+      }, { threshold: 0.05 }).observe(heroVid);
+    }
+    document.addEventListener("visibilitychange", function () { if (!document.hidden && heroInView) kick(); });
+    kick();
   }
 
   /* ---------- pasy parallax (band) ---------- */
