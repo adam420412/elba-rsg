@@ -783,3 +783,13 @@ body.menu-open .cookie-bar { display: none; }
 .photo-strip--4 { grid-template-columns: repeat(4, 1fr); }
 .photo-strip--4 .shot { aspect-ratio: 3 / 4; }
 @media (max-width: 900px) { .photo-strip--4 { grid-template-columns: repeat(2, 1fr); } }
+
+/* Hero: przycisk dźwięku */
+.hero-sound { position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(20px, 5vh, 56px); z-index: 6; display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; background: rgba(14,15,18,.55); color: var(--ink); border: 1px solid rgba(255,237,9,.55); font: inherit; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; cursor: pointer; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); transition: background .25s, border-color .25s, color .25s; }
+.hero-sound[hidden] { display: none; }
+.hero-sound:hover, .hero-sound:focus-visible { background: rgba(255,237,9,.14); border-color: var(--accent); color: var(--accent); outline: none; }
+.hero-sound svg { width: 20px; height: 20px; flex: none; }
+.hero-sound .hero-sound__on { display: none; }
+.hero-sound[aria-pressed="true"] .hero-sound__on { display: block; }
+.hero-sound[aria-pressed="true"] .hero-sound__off { display: none; }
+@media (max-width: 600px) { .hero-sound__txt { display: none; } .hero-sound { padding: 11px; } }

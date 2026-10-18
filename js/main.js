@@ -279,19 +279,62 @@
     }
   }
 
-  /* ---------- hero: płynne, ciągłe odtwarzanie wideo w tle ---------- */
+  /* ---------- hero: płynne wideo w tle + dźwięk 50% po pierwszej interakcji ---------- */
   var heroVid = document.querySelector(".hero-cine__bg video");
   if (heroVid) {
+    var heroInView = true, soundWanted = true, unlocked = false, soundBtn = document.querySelector(".hero-sound");
+    var conn = navigator.connection || {};
+    var smallScreen = window.matchMedia("(max-width: 820px)").matches || conn.saveData;
+    if (smallScreen) {
+      var ms = document.createElement("source");
+      ms.src = "media/wideo/rsg-hero-mobile.mp4"; ms.type = "video/mp4";
+      heroVid.insertBefore(ms, heroVid.firstChild);
+      heroVid.load();
+    }
     heroVid.muted = true;
     var kick = function () { var p = heroVid.play(); if (p && p.catch) p.catch(function () {}); };
     heroVid.addEventListener("loadeddata", kick);
     heroVid.addEventListener("pause", function () { if (!document.hidden && heroInView) kick(); });
     heroVid.addEventListener("stalled", kick);
-    var heroInView = true;
+
+    var hasSound = function () { return /rsg-hero-(full|mobile)/.test(heroVid.currentSrc || ""); };
+    var paintBtn = function () {
+      if (!soundBtn) return;
+      soundBtn.hidden = !hasSound();
+      var on = !heroVid.muted;
+      soundBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      soundBtn.setAttribute("aria-label", on ? "Wycisz film" : "Włącz dźwięk filmu");
+    };
+    var setSound = function (on) {
+      if (!hasSound()) return;
+      heroVid.volume = 0.5;
+      heroVid.muted = !on;
+      paintBtn();
+    };
+    heroVid.addEventListener("loadedmetadata", paintBtn);
+    heroVid.addEventListener("playing", paintBtn);
+
+    /* pierwsza interakcja (klik/klawisz/dotyk) = przeglądarka pozwala włączyć dźwięk */
+    var firstGesture = function (ev) {
+      if (soundBtn && soundBtn.contains(ev.target)) return;
+      ["pointerdown", "keydown", "touchend"].forEach(function (n) { document.removeEventListener(n, firstGesture, true); });
+      unlocked = true;
+      if (soundWanted && heroInView) setSound(true);
+    };
+    ["pointerdown", "keydown", "touchend"].forEach(function (n) { document.addEventListener(n, firstGesture, true); });
+
+    if (soundBtn) soundBtn.addEventListener("click", function () {
+      soundWanted = heroVid.muted;      /* użytkownik świadomie włącza lub wycisza */
+      unlocked = true;
+      setSound(soundWanted);
+      ["pointerdown", "keydown", "touchend"].forEach(function (n) { document.removeEventListener(n, firstGesture, true); });
+    });
+
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (en) {
         heroInView = en[0].isIntersecting;
-        if (heroInView) kick(); else heroVid.pause();
+        if (heroInView) { kick(); if (unlocked && soundWanted) setSound(true); }
+        else { heroVid.pause(); if (!heroVid.muted) { heroVid.muted = true; paintBtn(); } }
       }, { threshold: 0.05 }).observe(heroVid);
     }
     document.addEventListener("visibilitychange", function () { if (!document.hidden && heroInView) kick(); });
