@@ -793,3 +793,10 @@ body.menu-open .cookie-bar { display: none; }
 .hero-sound[aria-pressed="true"] .hero-sound__on { display: block; }
 .hero-sound[aria-pressed="true"] .hero-sound__off { display: none; }
 @media (max-width: 600px) { .hero-sound__txt { display: none; } .hero-sound { padding: 11px; } }
+
+/* Oferta: cztery pakiety w rzędzie, cena z przekreśleniem (Randka) */
+@media (min-width: 1280px) { .pkgs__grid { grid-template-columns: repeat(4, 1fr); } .pkgs__grid .pkg__price { font-size: clamp(1.9rem, 2.6vw, 2.5rem); } }
+@media (min-width: 1001px) and (max-width: 1279px) { .pkgs__grid { grid-template-columns: repeat(2, 1fr); } }
+.pkg__price--deal { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.pkg__price--deal s { font-size: .5em; font-weight: 600; color: var(--ink-dim); text-decoration-line: line-through; text-decoration-thickness: 2px; text-decoration-color: var(--accent); }
+.pkg__price--deal s::after { content: " zł"; font-family: var(--font-sans); font-size: .55em; letter-spacing: .04em; }
