@@ -782,6 +782,9 @@ body.menu-open .cookie-bar { display: none; }
 /* Eventy: pasek zdjęć w 4 kolumnach, kadry pionowe */
 .photo-strip--4 { grid-template-columns: repeat(4, 1fr); }
 .photo-strip--4 .shot { aspect-ratio: 3 / 4; }
+.photo-strip--5 { grid-template-columns: repeat(5, 1fr); }
+.photo-strip--5 .shot { aspect-ratio: 3 / 4; }
+@media (max-width: 900px) { .photo-strip--5 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) { .photo-strip--4 { grid-template-columns: repeat(2, 1fr); } }
 
 /* Hero: przycisk dźwięku */
